@@ -27,7 +27,8 @@ fi
 
 cp student-submission/ListExamples.java ./GradingArea
 
-javac -cp $CPATH GradingArea/*.java
+cd GradingArea/
+javac -cp $CPATH *.java
 
 if [[ $? -eq 0 ]]
 then
