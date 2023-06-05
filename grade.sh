@@ -25,9 +25,9 @@ else
 fi
 
 
-cp student-submission/ListExamples.java ./GradingArea
+cp student-submission/ListExamples.java ./grading-area
 
-cd GradingArea/
+cd grading-area
 javac -cp $CPATH *.java
 
 if [[ $? -eq 0 ]]
@@ -39,7 +39,7 @@ else
         exit 1
 fi
 
-java -cp $CPATH org.junit.runner.JUnitCOre TestListExamples > junit-output.txt
+java -cp $CPATH org.junit.runner.JUnitCore TestListExamples > junit-output.txt
 
 FAILURES = grep -c junit-output.txt
 
