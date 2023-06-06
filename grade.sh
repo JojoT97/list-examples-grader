@@ -39,7 +39,7 @@ else
 fi
 
 
-java -cp $CPATH org.junit.runner.JUnitCore grading-area/ListExamples > junit-output.txt
+java -cp $CPATH org.junit.runner.JUnitCore ListExamples > junit-output.txt
 
 FAILURES=$(grep -c 'FAILURES' junit-output.txt)
 
