@@ -41,7 +41,7 @@ fi
 
 java -cp $CPATH org.junit.runner.JUnitCore TestListExamples > junit-output.txt
 
-FAILURES = grep -c junit-output.txt
+FAILURES=$(grep -c junit-output.txt)
 
 if [[ $FAILURES -eq 0 ]]
 then
